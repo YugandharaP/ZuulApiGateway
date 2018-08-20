@@ -1,0 +1,7 @@
+/home/adminsitrator/Documents/ToDoApplication/ZuulApiGateway/src/main/java/com/bridgelabz/zuulserver/redisservice/RedisRepositoryImplementation.java
+/home/adminsitrator/Documents/ToDoApplication/ZuulApiGateway/src/main/java/com/bridgelabz/zuulserver/redisservice/IRedisRepository.java
+/home/adminsitrator/Documents/ToDoApplication/ZuulApiGateway/src/main/java/com/bridgelabz/zuulserver/ServletInitializer.java
+/home/adminsitrator/Documents/ToDoApplication/ZuulApiGateway/src/main/java/com/bridgelabz/zuulserver/zuulfilter/AuthenticationPreFilter.java
+/home/adminsitrator/Documents/ToDoApplication/ZuulApiGateway/src/main/java/com/bridgelabz/zuulserver/securityservice/JwtTokenProvider.java
+/home/adminsitrator/Documents/ToDoApplication/ZuulApiGateway/src/main/java/com/bridgelabz/zuulserver/ZuulServerApplication.java
+/home/adminsitrator/Documents/ToDoApplication/ZuulApiGateway/src/main/java/com/bridgelabz/zuulserver/configuration/ZuulApiGatewayConfig.java
