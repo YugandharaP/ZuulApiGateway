@@ -36,12 +36,11 @@ public class AuthenticationPreFilter extends ZuulFilter {
 
 	@Override
 	public Object run() throws ZuulException {
-		System.out.println("In zuul filter");
-		
 		RequestContext ctx = RequestContext.getCurrentContext();
 		HttpServletRequest request = ctx.getRequest();
 		
-		if(request.getRequestURI().startsWith("/zuulnotes/notes")) {
+		if(request.getRequestURI().startsWith("/zuulnotes/notes")||request.getRequestURI().contains("/user/uploadimage") 
+											|| request.getRequestURI().contains("/user/useractivation")) {
 			String tokenFromHeader = request.getHeader("token");
 
 			JwtTokenProvider tokenProvider = new JwtTokenProvider();
@@ -50,13 +49,13 @@ public class AuthenticationPreFilter extends ZuulFilter {
 			}
 			
 			String userId = tokenProvider.parseJWT(tokenFromHeader);
-			System.out.println(userId);
 			String tokenFromRedis = iRedisRepository.getToken(userId);
 
 			if (tokenFromRedis == null) {
 				return null;
 			}
 			else {
+				
 			ctx.addZuulRequestHeader("userId", userId);
 			LOGGER.info("PreFilter: "
 					+ String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
